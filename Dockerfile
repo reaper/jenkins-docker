@@ -22,6 +22,4 @@ RUN echo "rvm_install_on_use_flag=1" >> ~/.rvmrc
 RUN echo "rvm_project_rvmrc=1" >> ~/.rvmrc
 RUN echo "rvm_gemset_create_on_use_flag=1" >> ~/.rvmrc
 
-RUN ~/.rvm/bin/rvm use 3.0.0 --default
-RUN gem update bundler
-RUN bundle config build.nokogiri --use-system-libraries
+RUN . $HOME/.rvm/environments/ruby-3.0.0 && gem update bundler
