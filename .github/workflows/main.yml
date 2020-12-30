@@ -1,0 +1,10 @@
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Jenkins docker image build
+
+    steps:
+    - name: Build the jenkins docker image
+      uses: actions/jenkins-docker@v1
