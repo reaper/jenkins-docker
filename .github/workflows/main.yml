@@ -23,7 +23,7 @@ jobs:
         with:
           pull: true
           push: true
-          tags: jenkins/jenkins:latest
+          tags: r3aper/jenkins:latest
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
