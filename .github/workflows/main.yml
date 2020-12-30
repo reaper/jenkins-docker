@@ -23,8 +23,6 @@ jobs:
         with:
           pull: true
           push: true
-          context: .
-          file: ./Dockerfile
           tags: r3aper/jenkins:latest
       -
         name: Image digest
