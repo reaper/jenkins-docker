@@ -1,6 +1,0 @@
-# action.yml
-name: 'Jenkins docker image build'
-description: 'Build the jenkins docker image'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
