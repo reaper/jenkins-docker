@@ -3,7 +3,8 @@ USER root
 
 RUN apt-get update
 RUN apt-get install -y curl bison build-essential zlib1g-dev libssl-dev libreadline-dev \
-    libmariadb-dev libxml2-dev git-core default-libmysqlclient-dev pkg-config libxslt-dev
+    libmariadb-dev libxml2-dev git-core default-libmysqlclient-dev pkg-config libxslt-dev \
+    nodejs mysql-client
 RUN apt-get install -y awscli
 RUN apt-get install -y openvpn
 
