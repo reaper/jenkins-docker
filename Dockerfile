@@ -2,11 +2,9 @@ FROM jenkins/jenkins:latest
 USER root
 
 RUN apt-get update
-RUN apt-get install -y curl bison build-essential zlib1g-dev libssl-dev libreadline-dev \
-    libmariadb-dev libxml2-dev git-core default-libmysqlclient-dev pkg-config libxslt1-dev \
-    nodejs mysql-client
-RUN apt-get install -y awscli
-RUN apt-get install -y openvpn
+RUN apt-get install -y curl bison build-essential zlib1g-dev libssl-dev libreadline-dev
+RUN apt-get install -y libmariadb-dev libxml2-dev git-core default-libmysqlclient-dev pkg-config libxslt1-dev
+RUN apt-get install -y nodejs mysql-client awscli openvpn
 
 # Install scalingo
 RUN curl -O https://cli-dl.scalingo.io/install && bash install
