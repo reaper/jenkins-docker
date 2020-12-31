@@ -4,7 +4,7 @@ USER root
 RUN apt-get update
 RUN apt-get install -y curl bison build-essential zlib1g-dev libssl-dev libreadline-dev libxml2-dev git-core
 RUN apt-get install -y awscli
-RUN apt-get install -y openvpn-client
+RUN apt-get install -y openvpn
 
 # Install scalingo
 RUN curl -O https://cli-dl.scalingo.io/install && bash install
