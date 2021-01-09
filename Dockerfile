@@ -4,10 +4,7 @@ USER root
 RUN apt-get update
 RUN apt-get install -y curl bison build-essential zlib1g-dev libssl-dev libreadline-dev
 RUN apt-get install -y libmariadb-dev libxml2-dev git-core default-libmysqlclient-dev pkg-config libxslt1-dev
-RUN apt-get install -y nodejs mysql-client awscli openvpn vim rename sudo rsync duplicity gocryptfs fuse
-
-RUN add-apt-repository -yu ppa:duplicity-team/duplicity-release-git
-RUN apt-get install duplicity
+RUN apt-get install -y nodejs mysql-client awscli openvpn vim rename sudo rsync duplicity gocryptfs fuse duplicity
 
 RUN echo "jenkins ALL=(ALL) NOPASSWD: /usr/sbin/openvpn" >> /etc/sudoers.d/jenkins
 RUN echo "jenkins ALL=(ALL) NOPASSWD: /usr/bin/pkill openvpn" >> /etc/sudoers.d/jenkins
