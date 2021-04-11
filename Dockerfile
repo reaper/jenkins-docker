@@ -12,6 +12,7 @@ RUN echo "jenkins ALL=(ALL) NOPASSWD: /usr/sbin/openvpn" >> /etc/sudoers.d/jenki
 RUN echo "jenkins ALL=(ALL) NOPASSWD: /usr/bin/pkill openvpn" >> /etc/sudoers.d/jenkins
 RUN echo "jenkins ALL=(ALL) NOPASSWD: /bin/umount" >> /etc/sudoers.d/jenkins
 RUN echo "jenkins ALL=(ALL) NOPASSWD: /bin/mount" >> /etc/sudoers.d/jenkins
+RUN echo "jenkins ALL=(ALL) NOPASSWD: /usr/local/bin/duplicity" >> /etc/sudoers.d/jenkins
 
 # Install scalingo
 RUN curl -O https://cli-dl.scalingo.io/install && bash install
