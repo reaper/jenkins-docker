@@ -4,9 +4,7 @@ USER root
 RUN apt-get update
 RUN apt-get install -y curl bison build-essential zlib1g-dev libssl-dev libreadline-dev procps
 RUN apt-get install -y libmariadb-dev libxml2-dev git-core default-libmysqlclient-dev pkg-config libxslt1-dev
-RUN apt-get install -y nodejs mariadb-client awscli openvpn vim rename sudo rsync duplicity gocryptfs fuse librsync-dev gettext python3-pip iputils-ping
-
-RUN pip install duplicity b2sdk
+RUN apt-get install -y nodejs mariadb-client awscli openvpn vim rename sudo rsync duplicity gocryptfs fuse librsync-dev gettext python3-pip python3-b2sdk iputils-ping duplicity
 
 RUN echo "jenkins ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers.d/jenkins
 
