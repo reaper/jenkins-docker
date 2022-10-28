@@ -19,10 +19,10 @@ RUN curl -sSL https://get.rvm.io | bash
 RUN ~/.rvm/bin/rvm get master --auto-dotfiles
 RUN ~/.rvm/bin/rvm autolibs disable
 RUN ~/.rvm/bin/rvm requirements
-RUN ~/.rvm/bin/rvm install 3.1.2
+RUN ~/.rvm/bin/rvm install 2.7.4
 
 RUN echo "rvm_install_on_use_flag=1" >> ~/.rvmrc
 RUN echo "rvm_project_rvmrc=1" >> ~/.rvmrc
 RUN echo "rvm_gemset_create_on_use_flag=1" >> ~/.rvmrc
 
-RUN . $HOME/.rvm/environments/ruby-3.1.2 && gem update bundler
+RUN . $HOME/.rvm/environments/ruby-2.7.4 && gem update bundler
